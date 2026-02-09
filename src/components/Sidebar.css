@@ -1,0 +1,120 @@
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #1b2d6b 0%, #223879 45%, #2a4691 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+  height: fit-content;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-sublist {
+  list-style: none;
+  padding: 6px 0 4px 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-sublist--nested {
+  padding-left: 24px;
+}
+
+.sidebar-item {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(180deg, #2d4c8f 0%, #1e3472 100%);
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-caret {
+  margin-left: auto;
+  font-size: 12px;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-caret.expanded {
+  transform: rotate(180deg);
+}
+
+.sidebar-subitem {
+  background: linear-gradient(180deg, #2d4c8f 0%, #1e3472 100%);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.sidebar-subitem--nested {
+  font-size: 13px;
+  padding: 6px 9px;
+}
+
+.sidebar-item.active {
+  background: linear-gradient(180deg, #3b66b8 0%, #27488e 100%);
+  border-color: rgba(132, 206, 255, 0.75);
+  color: #ffffff;
+}
+
+.sidebar-item .sidebar-label,
+.sidebar-item .sidebar-icon {
+  color: #ffffff;
+}
+
+.sidebar-item .sidebar-caret {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-item.active .sidebar-label,
+.sidebar-item.active .sidebar-icon {
+  color: #ffffff;
+}
+
+.sidebar-item.active .sidebar-caret {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-icon {
+  font-size: 18px;
+}
+
+.sidebar-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.support-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #e2edff;
+}
+
+.support-text {
+  margin: 0;
+  font-size: 14px;
+  color: #d6e4ff;
+}
+
+@media (max-width: 960px) {
+  .sidebar {
+    width: 100%;
+  }
+}

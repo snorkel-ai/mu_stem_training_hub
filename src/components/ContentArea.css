@@ -1,0 +1,13 @@
+.content-area {
+  flex: 1;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 480px;
+}
+
+.content-container {
+  max-width: none;
+  width: 100%;
+}
