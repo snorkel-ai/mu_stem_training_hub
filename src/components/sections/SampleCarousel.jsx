@@ -13,7 +13,7 @@ function SampleCarousel({ domain, subdomain }) {
     let mounted = true
     const load = async () => {
       try {
-        const response = await fetch(`${import.meta.env.BASE_URL}/public/csv_samples/sample_questions.csv`)
+        const response = await fetch(`${import.meta.env.BASE_URL}/csv_samples/sample_questions.csv`)
         if (!response.ok) {
           throw new Error('Failed to load sample questions')
         }
