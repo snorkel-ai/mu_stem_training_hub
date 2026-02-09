@@ -9,7 +9,8 @@ function TrainingMaterial() {
           <li>
             <a className="inline-link"
               href="https://dataverse.harvard.edu/dataverse/harvard?q=&fq1=license%3A%22CC0+1.0%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order="
-              target="_blank" rel="noreferrer">
+              target="_blank"
+              rel="noreferrer">
               Harvard Dataverse
             </a>
           </li>
