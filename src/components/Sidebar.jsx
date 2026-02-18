@@ -65,7 +65,7 @@ function Sidebar({ activeSection, setActiveSection }) {
   const buildExpandedState = (items, acc = {}) => {
     items.forEach((item) => {
       if (item.children?.length) {
-        acc[item.id] = true
+        acc[item.id] = false
         buildExpandedState(item.children, acc)
       }
     })

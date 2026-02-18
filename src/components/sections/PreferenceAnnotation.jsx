@@ -108,18 +108,17 @@ function PreferenceAnnotation() {
           <div className="callout callout--highlight">
             <p><strong>Annotation Check</strong></p>
             <p>
-              <strong>IMPORTANT:</strong> Only run this check AFTER you have completed all
+              <strong>IMPORTANT:</strong> Only run this check <strong>AFTER</strong> you have completed all
               evaluations above. Do not run this check until you are finished with Steps 1–4.{' '}
-              <strong>Do not edit any of your previous answers after running the annotation check.</strong>
+              Do not edit any of your previous answers after running the annotation check.
             </p>
             <p>
-              After running the annotation check, select the outcome indicated by the system:
+              After running the annotation check, select the outcome exactly as shown by the system.
             </p>
             <ul>
               <li><strong>PASS</strong></li>
               <li><strong>NEEDS_REVISION</strong></li>
             </ul>
-            <p>Select the outcome exactly as shown by the annotation check results.</p>
           </div>
         </div>
       </div>
