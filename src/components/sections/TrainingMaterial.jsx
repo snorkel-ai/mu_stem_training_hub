@@ -15,16 +15,6 @@ function TrainingMaterial() {
             </a>
           </li>
           <li>
-            <a
-              className="inline-link"
-              href="https://docs.google.com/document/d/1XLnoZRM5wXWNWp_8PtHQNFntOykjFwrNR2M8rQPqOF8/edit?tab=t.4fr5gdls7wir"
-              target="_blank"
-              rel="noreferrer"
-            >
-              [EXTERNAL] Einstein STEM Guidelines
-            </a>
-          </li>
-          <li>
             <a className="inline-link" href="https://latexeditor.lagrida.com/" target="_blank" rel="noreferrer">
               LaTeX Equation Editor
             </a>

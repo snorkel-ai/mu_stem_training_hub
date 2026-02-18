@@ -1,6 +1,15 @@
 import { useState } from 'react'
 import './Sidebar.css'
 
+export const DISABLED_SECTION_IDS = new Set([
+  'sample-problems',
+  'math',
+  'biology',
+  'physics',
+  'chemistry',
+  'computer-science',
+])
+
 const sections = [
   {
     id: 'welcome',
@@ -38,7 +47,7 @@ const sections = [
   },
   {
     id: 'dos-donts',
-    label: "Do's and Dont's",
+    label: "Do's and Don'ts",
     icon: '✅',
     children: [
       { id: 'best-practices', label: 'Best Practices', icon: '⭐' },
@@ -90,11 +99,13 @@ function Sidebar({ activeSection, setActiveSection }) {
         return next
       })
     }
+    if (DISABLED_SECTION_IDS.has(item.id)) return
     setActiveSection(item.id)
   }
 
   const renderItem = (item, depth = 0) => {
-    const isActive = activeSection === item.id
+    const isDisabled = DISABLED_SECTION_IDS.has(item.id)
+    const isActive = !isDisabled && activeSection === item.id
     const isExpanded = expanded[item.id] || isDescendantActive(item)
     const hasChildren = item.children?.length
     const subitemClass =
@@ -103,7 +114,7 @@ function Sidebar({ activeSection, setActiveSection }) {
     return (
       <li key={item.id}>
         <button
-          className={`${subitemClass} ${isActive ? 'active' : ''}`}
+          className={`${subitemClass} ${isActive ? 'active' : ''} ${isDisabled ? 'sidebar-item--disabled' : ''}`}
           onClick={() => handleSectionClick(item)}
         >
           <span className="sidebar-icon">{item.icon}</span>

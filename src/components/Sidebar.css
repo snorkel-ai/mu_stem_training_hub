@@ -89,6 +89,19 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.sidebar-item--disabled,
+.sidebar-item--disabled .sidebar-label,
+.sidebar-item--disabled .sidebar-icon,
+.sidebar-item--disabled .sidebar-caret {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: not-allowed;
+}
+
+.sidebar-item--disabled {
+  background: linear-gradient(180deg, #2a3d6b 0%, #1a2845 100%);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 .sidebar-icon {
   font-size: 18px;
 }

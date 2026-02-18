@@ -159,8 +159,8 @@ function OriginalSubmissionStep6() {
                 <td>Rubric Self-Evaluation</td>
                 <td className="eval-blocking">Blocking</td>
                 <td>
-                  Grades the original author&apos;s reference answer against their own rubric. A task
-                  cannot be submitted until the reference answer passes 100% of all required and
+                  Grades the original author&apos;s reference solution against their own rubric. A task
+                  cannot be submitted until the reference solution passes 100% of all required and
                   optional criteria for the rubric.
                 </td>
                 <td>

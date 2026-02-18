@@ -9,7 +9,7 @@ function TaskingWorkflow() {
       </div>
       <div className="section-card">
         <h3>Original Submission</h3>
-        <p><strong>Who:</strong> Expert task authors.</p>
+        <p><strong>Who:</strong> Expert task authors</p>
         <ul>
           <li>Create a complete task package using the required fields and instructions.</li>
           <li>Meet the in‑app difficulty evaluation before submission.</li>
@@ -19,8 +19,8 @@ function TaskingWorkflow() {
         </div>
       </div>
       <div className="section-card">
-        <h3>Automated Checks</h3>
-        <p><strong>Who:</strong> Automated systems.</p>
+        <h3>Offline Evaluations</h3>
+        <p><strong>Who:</strong> Automated systems</p>
         <ul>
           <li>Validate data file integrity and accessibility.</li>
           <li>Review reference solution completeness and coherence.</li>
@@ -32,44 +32,27 @@ function TaskingWorkflow() {
         </div>
       </div>
       <div className="section-card">
-        <h3>Independent Submission</h3>
-        <p><strong>Who:</strong> Independent expert (not the original author).</p>
-        <ul>
-          <li>Attempt the task using only the question and provided data files.</li>
-          <li>Write step‑by‑step reasoning and a final answer in the required format.</li>
-          <li>Note missing information, ambiguities, or inconsistencies if found.</li>
-        </ul>
-        <div className="callout callout--info">
-          System checks for completeness, correctness, clarity, and rubric alignment.
-        </div>
-      </div>
-      <div className="section-card">
-        <h3>Solution Matching</h3>
-        <p><strong>Who:</strong> Automated comparison (with optional author follow‑up).</p>
-        <ul>
-          <li>Compare the original reference solution with the independent solution.</li>
-          <li>Short‑form: numeric tolerance, symbolic equivalence, or categorical match.</li>
-          <li>Long‑form: compare key steps, claims, methods, and conclusions.</li>
-        </ul>
-        <div className="callout callout--info">
-          Match → advances. Mismatch → returns for clarification and revision.
-        </div>
-      </div>
-      <div className="section-card">
         <h3>Preference Annotation</h3>
-        <p><strong>Who:</strong> Expert reviewer.</p>
+        <p><strong>Who:</strong> Expert reviewers</p>
         <ul>
-          <li>Review three solutions presented in random order and choose one preferred answer.</li>
-          <li>Prioritize: technical correctness, completeness/instruction following, structure/presentation.</li>
-          <li>If none are acceptable, provide rationale and send back.</li>
+          <li>Provide pass/fail judgements for a given question and two potential solutions, assessing whether they meet quality standards.</li>
+          <li>
+          Compare the two solutions across three dimensions:
+          <ul>
+            <li><strong>Technical Correctness</strong></li>
+            <li><strong>Structure and Presentation</strong></li>
+            <li><strong>Completeness and Instruction Following</strong></li>
+          </ul>
+        </li>
+        <li>For each dimension, select one of: Solution A is better, Both solutions are equal, or Solution B is better.</li>
         </ul>
         <div className="callout callout--info">
-          System action: Accepted → adjudication. LLM chosen or none acceptable → revision.
+          <strong>System actions:</strong> If the original solution passes all judgements and is equal to or better than the alternative solution across all dimensions → proceeds to Adjudication. If the original solution fails quality judgements or is worse than the alternative solution in any dimension → sent back to the original author for revision.
         </div>
       </div>
       <div className="section-card">
         <h3>Adjudication</h3>
-        <p><strong>Who:</strong> Adjudicators.</p>
+        <p><strong>Who:</strong> Adjudicators</p>
         <ul>
           <li>Full quality review of task, data, solutions, checks, and preference notes.</li>
           <li>Consider any submitted disagreements.</li>

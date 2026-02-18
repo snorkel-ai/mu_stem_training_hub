@@ -3,7 +3,7 @@ import './Section.css'
 function DosAndDonts() {
   return (
     <section className="section">
-      <h2>Do's and Dont's</h2>
+      <h2>Do's and Don'ts</h2>
       <div className="section-card">
         <h3>Best Practices</h3>
         <ul>
