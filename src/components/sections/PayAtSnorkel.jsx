@@ -2,10 +2,10 @@ import './Section.css'
 
 function PayAtSnorkel() {
   return (
-    <section className="section">
+    <section className="section pay-at-snorkel-page">
       <h2>Pay at Snorkel</h2>
       <div className="section-card">
-        <p><strong>Important pay rule for <span>einstein_stem</span></strong></p>
+        <p><strong><span>Project Einstein Pay Guidelines</span></strong></p>
         <div className="callout callout--warn">
           💡 <strong>Only ACCEPTED tasks are paid.</strong> Submitting a task during the tasking
           period does <strong>not</strong> guarantee payment in that cycle.
@@ -58,13 +58,13 @@ function PayAtSnorkel() {
             <div className="calendar-cell range-validation"><span className="calendar-date">15</span></div>
             <div className="calendar-cell range-validation range-end">
               <span className="calendar-date">16</span>
-              <span className="calendar-badge badge-pay-sent">$ Pay sent</span>
+              <span className="calendar-badge badge-pay-sent">$ Pay Sent</span>
             </div>
             <div className="calendar-cell"><span className="calendar-date">17</span></div>
             <div className="calendar-cell"><span className="calendar-date">18</span></div>
             <div className="calendar-cell range-payday">
               <span className="calendar-date">19</span>
-              <span className="calendar-badge badge-pay-received">✔ Pay received</span>
+              <span className="calendar-badge badge-pay-received">✔ Pay Received</span>
             </div>
             <div className="calendar-cell"><span className="calendar-date">20</span></div>
             <div className="calendar-cell"><span className="calendar-date">21</span></div>
@@ -88,15 +88,15 @@ function PayAtSnorkel() {
           <div className="calendar-legend">
             <span className="legend-item">
               <span className="legend-swatch legend-tasking" />
-              Tasking period (6–12)
+              Tasking Period (6th–12th)
             </span>
             <span className="legend-item">
               <span className="legend-swatch legend-validation" />
-              Validation period (13–16)
+              Validation Period (13th–16th)
             </span>
             <span className="legend-item">
               <span className="legend-swatch legend-pay" />
-              Pay sent (16) / Pay received (18)
+              Pay Sent (16th) / Pay Received (18th)
             </span>
           </div>
         </div>

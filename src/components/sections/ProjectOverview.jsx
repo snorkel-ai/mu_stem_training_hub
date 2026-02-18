@@ -12,7 +12,7 @@ function ProjectOverview() {
       </div>
       <div className="card-grid card-grid--two">
         <div className="section-card">
-          <h3>Target distribution</h3>
+          <h3>Target task distribution</h3>
           <table className="info-table">
             <thead>
               <tr>
@@ -37,7 +37,7 @@ function ProjectOverview() {
           </table>
         </div>
         <div className="section-card">
-          <h3>Short-form vs. long-form distribution</h3>
+          <h3>Short-form vs. long-form task distribution</h3>
           <table className="info-table">
             <thead>
               <tr>
@@ -152,13 +152,6 @@ function ProjectOverview() {
               <td>$410</td>
               <td>$410</td>
               <td>$504</td>
-            </tr>
-            <tr>
-              <td>Independent Submitter</td>
-              <td>$63</td>
-              <td>$63</td>
-              <td>$126</td>
-              <td>$126</td>
             </tr>
             <tr>
               <td>Preference Annotator</td>

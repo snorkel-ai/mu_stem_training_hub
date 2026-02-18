@@ -1,6 +1,6 @@
 import './Section.css'
 import platformLogin from '../../../images/platform_login.png'
-import projectPage from '../../../images/einstein_project_page.png'
+import projectPage from '../../../images/einstein_project_page.jpg'
 
 function ExpertsPortal() {
   return (

@@ -52,6 +52,10 @@
   margin-top: 12px;
 }
 
+.step-subsection--space-above {
+  margin-top: 20px;
+}
+
 .step-subtitle {
   margin: 0 0 8px;
   font-size: 15px;
@@ -180,10 +184,59 @@
 }
 
 .callout--highlight {
-  background: #ffe9a8;
+  background: #fff8e0;
   border-color: #f0b44a;
-  color: #7a5600;
+  color: #000;
   font-weight: 700;
+}
+
+.callout-heading {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pay-at-snorkel-page h2,
+.pay-at-snorkel-page h3,
+.pay-at-snorkel-page .step-title,
+.pay-at-snorkel-page .section-card,
+.pay-at-snorkel-page .callout,
+.pay-at-snorkel-page .callout--warn,
+.pay-at-snorkel-page .callout--info,
+.pay-at-snorkel-page p,
+.pay-at-snorkel-page ul,
+.pay-at-snorkel-page li,
+.pay-at-snorkel-page .calendar,
+.pay-at-snorkel-page .calendar-title,
+.pay-at-snorkel-page .calendar-day,
+.pay-at-snorkel-page .calendar-cell,
+.pay-at-snorkel-page .calendar-date,
+.pay-at-snorkel-page .calendar-badge,
+.pay-at-snorkel-page .calendar-legend,
+.pay-at-snorkel-page .legend-item {
+  color: #000;
+}
+
+.sample-block {
+  margin-top: 14px;
+}
+
+.sample-block:first-of-type {
+  margin-top: 0;
+}
+
+.sample-section-title {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand-navy);
+}
+
+.tags-reference-subtitle {
+  font-size: 14px;
+}
+
+.tags-reference-list {
+  font-size: 14px;
 }
 
 .card-grid {
@@ -222,6 +275,16 @@
   background: var(--bg-surface);
 }
 
+.step1-images img,
+.step2-images img,
+.step3-images img,
+.step4-images img,
+.step5-images img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .inline-link {
   color: var(--brand-navy);
   font-weight: 600;
@@ -251,6 +314,16 @@
 
 .info-table .highlight-row td {
   background: #ffe9a8;
+  font-weight: 600;
+}
+
+.info-table .eval-blocking {
+  background: #fecaca;
+  font-weight: 600;
+}
+
+.info-table .eval-non-blocking {
+  background: #fef3c7;
   font-weight: 600;
 }
 
@@ -352,8 +425,8 @@
 }
 
 .badge-pay-sent {
-  background: #fde68a;
-  color: #7a5600;
+  background: #bbf7d0;
+  color: #166534;
 }
 
 .badge-pay-received {

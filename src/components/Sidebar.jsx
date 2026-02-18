@@ -18,6 +18,7 @@ const sections = [
     label: 'Tasking Workflow',
     icon: '⚙️',
     children: [
+      { id: 'important-revisions', label: 'Important: Revisions', icon: '❗' },
       {
         id: 'original-submission',
         label: 'Original Submission',
@@ -27,10 +28,10 @@ const sections = [
           { id: 'os-step-2', label: 'Step 2: File & Question', icon: '🧾' },
           { id: 'os-step-3', label: 'Step 3: Reference Steps', icon: '🧠' },
           { id: 'os-step-4', label: 'Step 4: Answer & References', icon: '📌' },
-          { id: 'os-step-5', label: 'Step 5: Rubrics', icon: '📋' },
+          { id: 'os-step-5', label: 'Step 5: Tags & Rubrics', icon: '📋' },
+          { id: 'os-step-6', label: 'Step 6: Evaluation', icon: '✔️' },
         ],
       },
-      { id: 'independent-submission', label: 'Independent Submission', icon: '🧾' },
       { id: 'preference-annotation', label: 'Preference Annotation', icon: '✅' },
       { id: 'adjudication', label: 'Adjudication', icon: '⚖️' },
     ],
@@ -131,8 +132,7 @@ function Sidebar({ activeSection, setActiveSection }) {
         <div className="support-contacts">
           <h3 className="support-title">Support Contacts</h3>
           <p className="support-text">
-            Feel free to use our slack channel <strong>#einstein_submission</strong> for any questions you may have
-            have or reach out to Rene Villa.
+            Feel free to use our slack channel <strong>#einstein_submission</strong> for any questions you may have or reach out to Liam Glynn.
           </p>
         </div>
       </div>

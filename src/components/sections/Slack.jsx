@@ -22,7 +22,7 @@ function Slack() {
           <h3 className="step-title">#️⃣ Step 2: Find your project channel</h3>
           <ol>
             <li>When assigned, you will be added to the project channel.</li>
-            <li>For Einstein STEM, look for the <strong>#einstein-submission</strong> channel.</li>
+            <li>For Einstein STEM, look for the <strong>#einstein_submission</strong> channel.</li>
           </ol>
           <img src={slackSidebar} alt="Slack workspace sidebar with project channel" />
         </div>

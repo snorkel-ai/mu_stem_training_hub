@@ -20,15 +20,15 @@ function WelcomeToSnorkel() {
           .
         </p>
         <ul>
-          <li>Project name: <strong>einstein_stem</strong></li>
-          <li>Task nodes: Original Submission, Independent Submission, Preference Annotation, Adjudication</li>
+          <li>Project name: <strong>Einstein_STEM_V2</strong></li>
+          <li>Task nodes: Original Submission, Preference Annotation, Adjudication</li>
         </ul>
       </div>
       <div className="section-card">
         <h3>Slack</h3>
         <p>Join the Snorkel Expert Contributors workspace for updates and support.</p>
         <ul>
-          <li>Channel: <strong>#einstein-submission</strong></li>
+          <li>Channel: <strong>#einstein_submission</strong></li>
         </ul>
       </div>
       <div className="section-card">
@@ -41,9 +41,10 @@ function WelcomeToSnorkel() {
           <li>Accepted by Snorkel Ops or Adjudication → paid in that acceptance cycle.</li>
           <li>Not accepted → paid when the task is accepted in a later cycle.</li>
         </ul>
+        {/* Edit sample cycle dates below */}
         <p>
-          Sample cycle: Tasking <strong>6–12</strong>, Validation <strong>13–16</strong>,
-          Pay sent <strong>16</strong>, Pay received <strong>18</strong>.
+          Sample cycle: Tasking worked on <strong>6th–12th of the month</strong>, Validation occurs <strong>13th–16th of the month</strong>,
+          Pay sent <strong>16th of the month</strong>, Pay received <strong>18th of the month</strong>.
         </p>
       </div>
     </section>

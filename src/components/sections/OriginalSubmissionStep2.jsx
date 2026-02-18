@@ -1,27 +1,42 @@
 import './Section.css'
 import { InlineMath, BlockMath } from 'react-katex'
+import modalitySample from '../../../images/modality_sample.png'
 import datasetSample from '../../../images/dataset_sample.png'
 import questionSample from '../../../images/question_sample.png'
 
 function OriginalSubmissionStep2() {
   return (
     <section className="section">
-      <h2>Original Submission - Step 2</h2>
-      <div className="section-card section-card--step">
+      <h2>Step 2: Multimodal File & Question</h2>
+      <div className="section-card section-card--step step2-images">
         <h3 className="step-title">🧾 Multimodal File & Question</h3>
         <div className="step-subsection">
-          <h4 className="step-subtitle">1. Upload your data file (if required)</h4>
-          <p>
-            Data files must be <strong>CSV</strong>. Create your own or use open-source data with a
-            <strong> CC0 license</strong>.
-          </p>
-          <div className="image-card">
-            <img src={datasetSample} alt="Dataset upload example" />
-            <div className="image-caption">Dataset upload example.</div>
-          </div>
+          <h4 className="step-subtitle">1. Confirm Modality</h4>
+          <p>For each task you will be assigned a <strong>Modality</strong>, this indicates whether it&apos;s mandatory or optional to upload a file.</p>
+          <img src={modalitySample} alt="Modality selection example" />
         </div>
         <div className="step-subsection">
-          <h4 className="step-subtitle">2. Write your question</h4>
+          <h4 className="step-subtitle">2. Upload your data file (if required)</h4>
+          <p>
+            <strong>Your data file must be in .csv or .jpg/.png format.</strong> For the data, you
+            can either create a data file yourself, or you can find an open source data file for use.
+          </p>
+          <p>
+            Open source data files must have an explicit CC0 license. This{' '}
+            <a
+              className="inline-link"
+              href="https://dataverse.harvard.edu/dataverse/harvard?q=&fq1=license%3A%22CC0+1.0%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order="
+              target="_blank"
+              rel="noreferrer"
+            >
+              database
+            </a>{' '}
+            is a good source, but please ensure that the &quot;CC0 1.0&quot; License filter is selected.
+          </p>
+          <img src={datasetSample} alt="Dataset upload example" />
+        </div>
+        <div className="step-subsection">
+          <h4 className="step-subtitle">3. Write your question</h4>
           <p>Write a self‑contained question aligned to the chosen domain and subdomain.</p>
           <ul>
             <li>Require multi‑step reasoning (≥ 3 steps).</li>
@@ -36,7 +51,7 @@ function OriginalSubmissionStep2() {
               <li>Require multi‑step reasoning (≥ 3 steps).</li>
               <li>
                 Must specify:
-                <ol>
+                <ol type="a">
                   <li>Required derivation or computation</li>
                   <li>Expected output form (symbolic, numeric, or descriptive)</li>
                 </ol>
@@ -49,10 +64,19 @@ function OriginalSubmissionStep2() {
             math={'\\texttt{\\\\b[A-Z]\\{3\\}-\\\\d\\{4\\}\\\\b}'}
           />
         </div>
-          <div className="image-card">
-            <img src={questionSample} alt="Question example" />
-            <div className="image-caption">Question example.</div>
+          <div className="callout callout--highlight">
+            ⚠️ <strong>Multi-Part Questions vs. Multi-Part Reasoning</strong>
+            <p><strong>What we want:</strong> Questions that require multi-step reasoning to solve a single problem.</p>
+            <p><strong>What we don&apos;t want:</strong> Multi-part questions that ask for multiple separate answers.</p>
+            <p><strong>Good example (multi-step reasoning):</strong></p>
+            <p>&quot;Calculate the growth rate of the bacterial population using the provided OD measurements and the logistic growth model.&quot;</p>
+            <p>This is one question that requires multiple steps: transforming the data, applying the model, and calculating the final rate.</p>
+            <p><strong>Bad example (multi-part question):</strong></p>
+            <p>&quot;Calculate the mean, median, and standard deviation of the dataset. Then determine if the distribution is normal. Finally, identify any outliers.&quot;</p>
+            <p>This asks for three separate calculations/analyses, not one problem that requires multiple steps.</p>
+            <p><strong>Key distinction:</strong> Your question should ask for <strong>one answer or explanation</strong> that requires multiple reasoning steps to reach, not multiple separate answers.</p>
           </div>
+          <img src={questionSample} alt="Question example" />
         </div>
         <div className="step-subsection">
           <h4 className="step-subtitle">Sample question: Mathematics</h4>

@@ -6,48 +6,83 @@ import optionalCriteriaSample from '../../../images/optional_criteria_sample.png
 function OriginalSubmissionStep5() {
   return (
     <section className="section">
-      <h2>Original Submission - Step 5</h2>
+      <h2>Step 5: Tags & Rubrics</h2>
       <div className="section-card section-card--step">
-        <h3 className="step-title">📋 Rubrics</h3>
+        <h3 className="step-title">🏷️ Tags</h3>
+        <p>Once you provide your answers, you will need to provide tags to indicate topics or themes someone would need to know to solve the problem.</p>
         <div className="step-subsection">
-          <h4 className="step-subtitle">1. Required criteria</h4>
-          <ul>
-            <li>Rubrics assess structure, technical correctness, and completeness.</li>
-            <li>Include at least <strong>5 required</strong> criteria; add more if needed.</li>
+          <h4 className="step-subtitle tags-reference-subtitle">Reference samples</h4>
+          <ul className="tags-reference-list">
+            <li><strong>Mathematics:</strong> SVD; best-rank-k; Eckart-Young; Frobenius-norm; orthogonal-invariance; low-rank-approximation</li>
+            <li><strong>Biology:</strong> logistic growth; nonlinear modeling; parameter estimation; microbial dynamics; carrying capacity</li>
           </ul>
+        </div>
+      </div>
+      <div className="section-card section-card--step step5-images">
+        <h3 className="step-title">📋 Rubrics</h3>
+        <p>A collection of objective evaluation criteria designed to produce rich and reproducible assessments of model responses.</p>
+        <p>Each criterion will consistently cover the following top-level dimensions of quality:</p>
+        <ul>
+          <li><strong>Structure and Presentation:</strong> Checks whether the response is clearly written, logically organized, and easy to understand.</li>
+          <li><strong>Technical Correctness:</strong> Checks whether all claims, methods, formulas and reasoning steps are valid, logically sound, consistent with established domain knowledge, and sufficiently justified.</li>
+          <li><strong>Completeness and Instruction Following:</strong> Checks that the response fully addresses the question and follows any instructions specified in the question, adheres to constraints, and stays within scope.</li>
+        </ul>
+        <div className="callout callout--highlight">
+          Across both required and optional criteria, at least two criteria of each dimension are required.
+        </div>
+        <div className="step-subsection step-subsection--space-above">
+          <h4 className="step-subtitle">1. Required criteria</h4>
+          <p><strong>Each task will need to include at least 5 required criteria.</strong> These are criteria that the final answer should always follow. If your question or problem is elaborate, then you have the option to add more required criteria.</p>
+          <img src={requiredCriteriaSample} alt="Required rubric criteria example" />
           <div className="callout callout--info">
-            Sample required rubric (Mathematics)
-            <ol>
-              <li>Uses orthogonal invariance of the Frobenius norm to reduce to the diagonal case.</li>
-              <li>Correctly enforces the rank-k constraint in the lower-bound argument.</li>
-              <li>
-                Derives the bound <InlineMath math={'\\sum_{i=k+1}^{r} \\sigma_i^2'} /> correctly.
-              </li>
-              <li>Constructs the truncated SVD and verifies it achieves the bound.</li>
-              <li>Concludes that every minimizer must attain this value.</li>
-            </ol>
-          </div>
-          <div className="image-card">
-            <img src={requiredCriteriaSample} alt="Required rubric criteria example" />
-            <div className="image-caption">Required rubric criteria example.</div>
+            <div className="callout-heading">Sample required rubric</div>
+            <div className="sample-block">
+              <h5 className="sample-section-title">Mathematics</h5>
+              <ol>
+                <li>Uses orthogonal invariance of the Frobenius norm to reduce to the diagonal case.</li>
+                <li>Correctly enforces the rank-k constraint in the lower-bound argument.</li>
+                <li>
+                  Derives the bound <InlineMath math={'\\sum_{i=k+1}^{r} \\sigma_i^2'} /> correctly.
+                </li>
+                <li>Constructs the truncated SVD and verifies it achieves the bound.</li>
+                <li>Concludes that every minimizer must attain this value.</li>
+              </ol>
+            </div>
+            <div className="sample-block">
+              <h5 className="sample-section-title">Biology</h5>
+              <ol>
+                <li>Reports a single numeric value for <InlineMath math={'r'} /> with correct units.</li>
+                <li>Correctly rearranges the logistic growth equation.</li>
+                <li>Correctly applies the logarithmic transformation.</li>
+                <li>Correctly estimates the slope using multiple data points.</li>
+                <li>Reports <InlineMath math={'r'} /> within ±0.005 <InlineMath math={'\\mathrm{hr}^{-1}'} /> of the reference value.</li>
+                <li>Uses the provided value of <InlineMath math={'K'} /> exactly.</li>
+              </ol>
+            </div>
           </div>
         </div>
         <div className="step-subsection">
           <h4 className="step-subtitle">2. Optional criteria</h4>
-          <ul>
-            <li>Include at least <strong>4 optional</strong> criteria to capture excellence.</li>
-          </ul>
+          <p><strong>Each task will need to include at least 4 optional criteria.</strong> These are criteria that the final answer could follow but are not mandatory. Think of these like nice to haves or criteria that differentiate an excellent sample and a stellar sample.</p>
+          <img src={optionalCriteriaSample} alt="Optional rubric criteria example" />
           <div className="callout callout--info">
-            Sample optional rubric (Biology)
-            <ol>
-              <li>Clearly states modeling assumptions.</li>
-              <li>Uses all provided data points.</li>
-              <li>Rounds the final answer to three decimal places.</li>
-            </ol>
-          </div>
-          <div className="image-card">
-            <img src={optionalCriteriaSample} alt="Optional rubric criteria example" />
-            <div className="image-caption">Optional rubric criteria example.</div>
+            <div className="callout-heading">Sample optional rubric</div>
+            <div className="sample-block">
+              <h5 className="sample-section-title">Mathematics</h5>
+              <ol>
+                <li>Clear notation for <InlineMath math={'\\Sigma_k'} /> and truncated SVD.</li>
+                <li>Explicit statement that rank is invariant under orthogonal transformations.</li>
+                <li>Brief comment on non-uniqueness when <InlineMath math={'\\sigma_k = \\sigma_{k+1}'} />.</li>
+              </ol>
+            </div>
+            <div className="sample-block">
+              <h5 className="sample-section-title">Biology</h5>
+              <ol>
+                <li>Clearly states modeling assumptions.</li>
+                <li>Uses all provided data points.</li>
+                <li>Rounds the final answer to three decimal places.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
