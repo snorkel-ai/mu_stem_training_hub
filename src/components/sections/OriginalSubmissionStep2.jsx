@@ -22,7 +22,9 @@ function OriginalSubmissionStep2() {
             can either create a data file yourself, or you can find an open source data file for use.
           </p>
           <p>
-            Open source data files must have an explicit CC0 license. This{' '}
+            <strong>Open source data files must have an explicit CC0 license.</strong>{' '}
+            <strong>No other licenses (e.g. CC BY-NC-ND) or alternatives derived from it are permitted.</strong>{' '}
+            This{' '}
             <a
               className="inline-link"
               href="https://dataverse.harvard.edu/dataverse/harvard?q=&fq1=license%3A%22CC0+1.0%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order="
@@ -33,6 +35,7 @@ function OriginalSubmissionStep2() {
             </a>{' '}
             is a good source, but please ensure that the &quot;CC0 1.0&quot; License filter is selected.
           </p>
+          <p><strong>.csv files must be 0.5 MB or less.</strong></p>
           <img src={datasetSample} alt="Dataset upload example" />
         </div>
         <div className="step-subsection">

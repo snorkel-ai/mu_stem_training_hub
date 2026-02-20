@@ -22,6 +22,7 @@
   border-radius: 16px;
   padding: 18px;
   box-shadow: 0 8px 24px rgba(12, 18, 52, 0.08);
+  font-size: 14px;
 }
 
 .hero-card {
@@ -56,6 +57,15 @@
   margin-top: 20px;
 }
 
+.block-space-above {
+  margin-top: 28px;
+}
+
+.feedback-format {
+  margin-left: 16px;
+  margin-top: 4px;
+}
+
 .step-subtitle {
   margin: 0 0 8px;
   font-size: 15px;
@@ -72,7 +82,7 @@
 
 .image-caption {
   margin-top: 6px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-muted);
 }
 
@@ -118,7 +128,7 @@
 }
 
 .sample-label {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -148,9 +158,14 @@
   background: #f2f6ff;
   border: 1px solid rgba(20, 25, 77, 0.12);
   border-radius: 10px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.45;
   white-space: pre-wrap;
+}
+
+.code-block p,
+.code-block pre {
+  font-size: 14px;
 }
 
 .step-title {
@@ -188,6 +203,20 @@
   border-color: #f0b44a;
   color: #000;
   font-weight: 700;
+}
+
+.callout--highlight .step-subtitle,
+.callout--highlight h4 {
+  color: #000;
+}
+
+.callout--highlight p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.callout--highlight p + p {
+  margin-top: 8px;
 }
 
 .callout-heading {
@@ -262,6 +291,16 @@
   border: 1px solid var(--border-default);
 }
 
+.section-card img.image-centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-card img.image-space-above {
+  margin-top: 12px;
+}
+
 .section-card img.image-wide {
   width: 100%;
   max-height: 420px;
@@ -307,9 +346,14 @@
 }
 
 .info-table th {
-  background: #e2edff;
+  background: #c5d9ff;
   color: var(--brand-navy);
   font-weight: 600;
+  vertical-align: middle;
+}
+
+.info-table td {
+  background: #fafcff;
 }
 
 .info-table .highlight-row td {
@@ -367,7 +411,7 @@
 
 .calendar-day {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--brand-navy);
 }
@@ -387,7 +431,7 @@
 }
 
 .calendar-date {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -420,7 +464,7 @@
   margin-top: 8px;
   padding: 4px 6px;
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -438,7 +482,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px 20px;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-muted);
 }
 
@@ -468,4 +512,10 @@
 .legend-pay {
   background: #bbf7d0;
   border-color: #86efac;
+}
+
+/* Sub-pages: all text black (sidebar, header, dropdowns unchanged) */
+.content-area .section,
+.content-area .section * {
+  color: #000;
 }

@@ -28,18 +28,18 @@ function OriginalSubmissionStep5() {
           <li><strong>Completeness and Instruction Following:</strong> Checks that the response fully addresses the question and follows any instructions specified in the question, adheres to constraints, and stays within scope.</li>
         </ul>
         <div className="callout callout--highlight">
-          Across both required and optional criteria, at least two criteria of each dimension are required.
+          ⚠️ Across both required and optional criteria, at least two criteria of each dimension are required.
         </div>
-        <div className="step-subsection step-subsection--space-above">
+        <div className="callout callout--highlight">
           <h4 className="step-subtitle">⚠️ Creating Self-Contained Rubrics</h4>
           <p><strong>CRITICAL: Your rubric must work independently of your reference solution.</strong></p>
           <p>Your rubric will evaluate multiple solutions that may use different valid approaches. <strong>Write criteria that assess correctness, not whether solutions match your specific method.</strong></p>
-          <p><strong>❌ BAD – References your answer:</strong></p>
+          <p><strong>BAD – References your answer:</strong></p>
           <ul>
             <li>Uses the same three-step approach as shown in the reference solution</li>
             <li>Follows the exact method outlined in the reference solution</li>
           </ul>
-          <p><strong>✅ GOOD – Self-contained:</strong></p>
+          <p><strong>GOOD – Self-contained:</strong></p>
           <ul>
             <li>Applies the logistic growth equation <InlineMath math={'N(t) = \\frac{K}{1 + Ae^{-rt}}'} /> with all variables defined</li>
             <li>Performs a linearization transformation (e.g., <InlineMath math={'\\ln(K/N - 1) = \\ln(A) - rt'} />) to enable parameter estimation</li>
