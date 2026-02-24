@@ -26,7 +26,12 @@ function PreferenceAnnotation() {
               context, single-step reasoning, or unclear requirements.
             </li>
           </ul>
-          <p><strong>Please provide feedback on how the question could improve, if applicable.</strong></p>
+          <div className="callout callout--highlight">
+            <p><strong>⚠️ IMPORTANT:</strong> Please provide feedback on how the question could improve, if applicable.</p>
+            <p style={{ marginTop: '12px' }}>
+              If you marked No (Fail) here, you will be asked to leave feedback. Specify which part of the question is problematic, why it is an issue, and what the contributor should change to fix it. Be specific enough that the contributor can act on your feedback without guessing. For example, instead of &quot;the question is ambiguous,&quot; write &quot;the question does not specify whether the gas is ideal or real, which changes the approach entirely.&quot;
+            </p>
+          </div>
         </div>
         <div className="step-subsection">
           <h4 className="step-subtitle">Step 2: Review Both Solutions</h4>
@@ -75,7 +80,12 @@ function PreferenceAnnotation() {
               incomplete reasoning, or missing critical elements.
             </li>
           </ul>
-          <p><strong>Please provide feedback on how Solution A could improve, if applicable.</strong></p>
+          <div className="callout callout--highlight">
+            <p><strong>⚠️ IMPORTANT:</strong> Please provide feedback on how Solution A could improve, if applicable.</p>
+            <p style={{ marginTop: '12px' }}>
+              For any dimension where you prefer one solution over the other, you will be asked to leave feedback on the weaker solution. This means you may need to leave feedback on one or both solutions. Be specific enough that the contributor can act on your feedback without guessing. For example, instead of &quot;the reasoning is unclear,&quot; write &quot;Solution A fails Technical Correctness because Step 3 skips the derivation of X, which should be shown explicitly before arriving at the final result.&quot;
+            </p>
+          </div>
           <p className="block-space-above"><strong>Is Solution B Well-Formed?</strong></p>
           <p>
             Review Solution B and evaluate if it is well structured and presented, technically
@@ -91,7 +101,9 @@ function PreferenceAnnotation() {
               incomplete reasoning, or missing critical elements.
             </li>
           </ul>
-          <p><strong>Please provide feedback on how Solution B could improve, if applicable.</strong></p>
+          <div className="callout callout--highlight">
+            <p><strong>⚠️ IMPORTANT:</strong> Please provide feedback on how Solution B could improve, if applicable.</p>
+          </div>
         </div>
         <div className="step-subsection">
           <h4 className="step-subtitle">Step 5: Post-Annotation</h4>
@@ -107,9 +119,7 @@ function PreferenceAnnotation() {
           <p><strong>Annotation Check</strong></p>
           <div className="callout callout--highlight">
             <p>
-              ⚠️ <strong>IMPORTANT:</strong> Only run this check <strong>AFTER</strong> you have completed all
-              evaluations above. Do not run this check until you are finished with Steps 1–4.{' '}
-              Do not edit any of your previous answers after running the annotation check.
+              ⚠️ <strong>IMPORTANT:</strong> The Annotation Check reveals whether the human submitter&apos;s answer was preferred over the LLM-generated response. Only run this check after completing Steps 1–4; this ensures your ratings are not biased by knowing which solution is which beforehand. Do not edit or reference any of your previous answers after running the check.
             </p>
           </div>
           <p><strong>Outcome</strong></p>
@@ -117,10 +127,11 @@ function PreferenceAnnotation() {
           <ul>
             <li><strong>PASS</strong></li>
             <li><strong>NEEDS_REVISION</strong></li>
+            <li><strong>REJECT</strong></li>
           </ul>
           <p><strong>Feedback</strong></p>
           <p>
-            Under <strong>Feedback</strong>, copy and paste the exact text shown in the <strong>Evaluator box</strong> <em>after the colon</em> — it will follow the format:
+            If the outcome is <strong>NEEDS_REVISION</strong> or <strong>REJECT</strong>, copy and paste the exact text from the <strong>Evaluator box</strong> into the <strong>Feedback</strong> field. Copy the text <em>after the colon</em> — it will follow the format:
           </p>
           <p className="feedback-format"><em>&quot;Question feedback: [Insert question feedback text]. Solution feedback: [Insert solution feedback text].&quot;</em></p>
           <div className="callout callout--highlight">

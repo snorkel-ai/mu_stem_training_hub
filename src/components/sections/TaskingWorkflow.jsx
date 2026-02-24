@@ -35,7 +35,13 @@ function TaskingWorkflow() {
         <h3>Preference Annotation</h3>
         <p><strong>Who:</strong> Expert reviewers</p>
         <ul>
-          <li>Provide pass/fail judgements for a given question and two potential solutions, assessing whether they meet quality standards.</li>
+          <li>
+            Expert provides pass/fail judgements for the question and two solutions, Second, experts provide multi-axis preference feedback with corresponding rationales for two solutions, determining if they meet quality standards:
+            <ul>
+              <li>The expert authored reference answer</li>
+              <li>An LLM generated answer: Claude Opus 4.6</li>
+            </ul>
+          </li>
           <li>
           Compare the two solutions across three dimensions:
           <ul>
