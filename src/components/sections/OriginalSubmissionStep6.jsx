@@ -24,25 +24,20 @@ function OriginalSubmissionStep6() {
         <div className="step-subsection">
           <h4 className="step-subtitle">Difficulty Evaluation</h4>
           <p>
-            Before your submission can proceed to the next phase, you must select a difficulty tier
-            and validate that your question meets that tier&apos;s criteria.
+            Every submission automatically goes through an offline difficulty evaluation. To advance
+            to the next phase, your submission must pass this evaluation <strong>and</strong> have the consent
+            checkbox checked.
           </p>
-          <p><strong>How It Works</strong></p>
-          <ol>
-            <li>
-              <strong>Validate Question/Answer Quality:</strong> Ensure your submission passes the
-              Rubric Self Evaluation and Criteria Diversity evaluations.
-            </li>
-            <li>
-              <strong>Run Models and Grade Response:</strong> The system tests your question against
-              5 frontier models (this may take a few minutes). At least 1 model needs to fail for
-              your submission to move on to the next phase.
-            </li>
-            <li>
-              <strong>Select Difficulty Tier:</strong> Based on model failures, select the
-              appropriate tier (Frontier, Advanced, or Core).
-            </li>
-          </ol>
+          <p><strong>1. In-App Evaluation (Optional)</strong></p>
+          <p>
+            You can run a quick in-app difficulty check before submitting. <strong>This is optional</strong>; it may not work for complex questions and won&apos;t affect your ability
+            to submit. Use it as a rough pulse check only.
+          </p>
+          <p>
+            Select your difficulty tier based on how many of the 5 frontier models fail. If you do
+            not run the check, feel free to just select Advanced. We will assign difficulty based on
+            the offline difficulty run regardless.
+          </p>
           <table className="info-table">
             <thead>
               <tr>
@@ -65,6 +60,55 @@ function OriginalSubmissionStep6() {
               </tr>
             </tbody>
           </table>
+          <p><strong>2. Difficulty Assignment (Ignore on First Submission)</strong></p>
+          <p>
+            The <strong>Difficulty Assignment</strong> field on the submission form will auto-populate
+            after submission with your offline evaluation results, showing you the actual number of
+            model failures. No action needed; it&apos;s there for your reference and to help you
+            understand your results if your submission is returned.
+          </p>
+          <p><strong>3. Check the Consent Box (Optional)</strong></p>
+          <p>
+            At the bottom of the submission form, you&apos;ll see a <strong>Difficulty Evaluation
+            Consent</strong> checkbox. Checking this means: <em>&quot;I&apos;m ready for this submission to
+            advance if it passes offline evaluation.&quot;</em>
+          </p>
+          <div className="callout callout--highlight">
+            <p>
+              ⚠️ <strong>IMPORTANT:</strong> You don&apos;t have to check this box right away. If you leave it unchecked, you&apos;ll receive
+              offline evaluation feedback and can iterate on your question before proceeding.
+            </p>
+          </div>
+          <p><strong>4. Automatic Offline Evaluation</strong></p>
+          <table className="info-table info-table--outcome-matrix">
+            <thead>
+              <tr>
+                <th>Consent Box</th>
+                <th>Offline Evaluation Result</th>
+                <th>Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Unchecked</td>
+                <td>Any</td>
+                <td>Feedback* returned, check Difficulty Assignment field for results. Resubmission needed to advance.</td>
+              </tr>
+              <tr>
+                <td>Checked</td>
+                <td>Fails</td>
+                <td>Feedback* returned, check Difficulty Assignment field for results. Resubmission needed to advance.</td>
+              </tr>
+              <tr className="eval-advances">
+                <td>Checked</td>
+                <td>Passes (at least 1 model fails)</td>
+                <td>Advances to next phase</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="outcome-table-note">
+            <strong>*A failed difficulty evaluation does not count towards your three-revision limit.</strong>
+          </p>
         </div>
         <div className="step-subsection">
           <h4 className="step-subtitle">Evaluations Deep Dive</h4>

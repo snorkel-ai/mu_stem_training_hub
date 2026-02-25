@@ -371,6 +371,24 @@
   font-weight: 600;
 }
 
+.info-table tr.eval-advances td {
+  background: #dcfce7;
+  font-weight: 600;
+}
+
+.info-table--outcome-matrix td,
+.info-table--outcome-matrix th {
+  vertical-align: middle;
+}
+
+.info-table--outcome-matrix {
+  margin-bottom: 1.25rem;
+}
+
+.outcome-table-note {
+  margin-top: 0.5rem;
+}
+
 .info-table--wide td {
   line-height: 1.5;
 }
