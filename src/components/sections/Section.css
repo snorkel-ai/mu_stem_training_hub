@@ -342,7 +342,7 @@
   border: 1px solid var(--border-default);
   padding: 10px 12px;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .info-table th {
@@ -376,13 +376,35 @@
   font-weight: 600;
 }
 
-.info-table--outcome-matrix td,
-.info-table--outcome-matrix th {
-  vertical-align: middle;
-}
-
 .info-table--outcome-matrix {
   margin-bottom: 1.25rem;
+}
+
+.info-table--eval {
+  table-layout: fixed;
+}
+
+.info-table--eval th:nth-child(1),
+.info-table--eval td:nth-child(1) {
+  width: 18%;
+  text-align: center;
+}
+
+.info-table--eval th:nth-child(2),
+.info-table--eval td:nth-child(2) {
+  width: 14%;
+  min-width: 100px;
+  text-align: center;
+}
+
+.info-table--eval th:nth-child(3),
+.info-table--eval td:nth-child(3) {
+  width: 34%;
+}
+
+.info-table--eval th:nth-child(4),
+.info-table--eval td:nth-child(4) {
+  width: 34%;
 }
 
 .outcome-table-note {

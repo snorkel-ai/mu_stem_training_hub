@@ -130,7 +130,7 @@ function OriginalSubmissionStep6() {
         <div className="step-subsection">
           <h4 className="step-subtitle">Question Quality (3 evaluations)</h4>
           <p>These evaluations ensure your question is well-formed, clear, and solvable.</p>
-          <table className="info-table">
+          <table className="info-table info-table--eval">
             <thead>
               <tr>
                 <th>Evaluation Name</th>
@@ -189,7 +189,7 @@ function OriginalSubmissionStep6() {
             These evaluations review the quality, correctness, and completeness of your reference
             solution.
           </p>
-          <table className="info-table">
+          <table className="info-table info-table--eval">
             <thead>
               <tr>
                 <th>Evaluation Name</th>
@@ -236,7 +236,7 @@ function OriginalSubmissionStep6() {
             These evaluations ensure your rubrics are comprehensive, clear, and aligned with your
             solution.
           </p>
-          <table className="info-table">
+          <table className="info-table info-table--eval">
             <thead>
               <tr>
                 <th>Evaluation Name</th>
@@ -309,9 +309,9 @@ function OriginalSubmissionStep6() {
           </table>
         </div>
         <div className="step-subsection">
-          <h4 className="step-subtitle">Overall Submission Quality (3 evaluations)</h4>
+          <h4 className="step-subtitle">Overall Submission Quality (4 evaluations)</h4>
           <p>These evaluations review overall task quality and file formatting.</p>
-          <table className="info-table">
+          <table className="info-table info-table--eval">
             <thead>
               <tr>
                 <th>Evaluation Name</th>
@@ -322,7 +322,20 @@ function OriginalSubmissionStep6() {
             </thead>
             <tbody>
               <tr>
-                <td>Difficulty</td>
+                <td>CSV & Image</td>
+                <td className="eval-blocking">Blocking</td>
+                <td>
+                  If a file has been uploaded, ensures that it is a csv/image (or a csv/image that
+                  has been zipped), not pdf, etc.
+                </td>
+                <td>
+                  Make sure your uploaded file is in the correct format: CSV for data files, or
+                  standard image formats (PNG, JPG). If you need multiple files, zip them together.
+                  Do not upload PDFs.
+                </td>
+              </tr>
+              <tr>
+                <td>Difficulty (Offline)</td>
                 <td className="eval-blocking">Blocking</td>
                 <td>
                   Checks if the submission meets the overall difficulty criteria. At least one
@@ -335,16 +348,16 @@ function OriginalSubmissionStep6() {
                 </td>
               </tr>
               <tr>
-                <td>CSV & Image</td>
-                <td className="eval-blocking">Blocking</td>
+                <td>Difficulty (Optional)</td>
+                <td className="eval-non-blocking">Non-Blocking</td>
                 <td>
-                  If a file has been uploaded, ensures that it is a CSV/image (or a CSV/image that
-                  has been zipped), not PDF, etc.
+                  Optional lightweight check. Tests your question against frontier models to estimate
+                  difficulty tier. May not complete for complex questions.
                 </td>
                 <td>
-                  Make sure your uploaded file is in the correct format: CSV for data files, or
-                  standard image formats (PNG, JPG). If you need multiple files, zip them together.
-                  Do not upload PDFs.
+                  If your submission fails this evaluation, your question may be too easy. Consider
+                  adding more complexity or steps to the problem, requiring deeper reasoning or more
+                  advanced concepts, or using more challenging data or constraints.
                 </td>
               </tr>
               <tr>
@@ -354,7 +367,7 @@ function OriginalSubmissionStep6() {
                 <td>
                   Use proper LaTeX syntax for all mathematical expressions. Check that all equations,
                   symbols, fractions, and special characters render correctly. Test your LaTeX in a
-                  previewer if unsure. The evaluator should give specific feedback on where
+                  previewer if unsure. The evaluator should give specific feedback of where
                   correction is needed.
                 </td>
               </tr>
