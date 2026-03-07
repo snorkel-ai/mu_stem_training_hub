@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "overrides": {
-    "rollup": ">=4.59.0"
+    "rollup": ">=4.59.0",
+    "esbuild": ">=0.25.0"
   },
   "scripts": {
     "dev": "vite",
