@@ -10,6 +10,13 @@ function WelcomeToSnorkel() {
           understand how tasks flow, and learn the standards for high‑quality submissions.
         </p>
       </div>
+      <div className="section-card section-card--announcement">
+        <h3>⚠️ Important Announcement ⚠️</h3>
+        <p>
+          <strong>Guidelines are being migrated to the #einstein_submission Slack channel.</strong>{' '}
+          <strong>Please refer to this channel for tasking instructions.</strong>
+        </p>
+      </div>
       <div className="section-card">
         <h3>Experts Portal</h3>
         <p>

@@ -2,6 +2,23 @@ import { useState } from 'react'
 import './Sidebar.css'
 
 export const DISABLED_SECTION_IDS = new Set([
+  'project-overview',
+  'tasking-workflow',
+  'important-revisions',
+  'original-submission',
+  'os-step-1',
+  'os-step-2',
+  'os-step-3',
+  'os-step-4',
+  'os-step-5',
+  'os-step-6',
+  'preference-annotation',
+  'adjudication',
+  'dos-donts',
+  'best-practices',
+  'common-errors',
+  'what-to-avoid',
+  'training-material',
   'sample-problems',
   'math',
   'biology',
@@ -89,6 +106,7 @@ function Sidebar({ activeSection, setActiveSection }) {
     )
 
   const handleSectionClick = (item) => {
+    if (DISABLED_SECTION_IDS.has(item.id)) return
     if (item.children?.length) {
       setExpanded((prev) => {
         const next = { ...prev }
@@ -99,7 +117,6 @@ function Sidebar({ activeSection, setActiveSection }) {
         return next
       })
     }
-    if (DISABLED_SECTION_IDS.has(item.id)) return
     setActiveSection(item.id)
   }
 

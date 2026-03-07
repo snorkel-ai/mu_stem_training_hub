@@ -27,7 +27,7 @@ import ComputerScience from './sections/ComputerScience'
 import TrainingMaterial from './sections/TrainingMaterial'
 import './ContentArea.css'
 
-function ContentArea({ activeSection }) {
+function ContentArea({ activeSection, setActiveSection }) {
   const renderContent = () => {
     switch (activeSection) {
       case 'welcome':
@@ -61,7 +61,7 @@ function ContentArea({ activeSection }) {
       case 'preference-annotation':
         return <PreferenceAnnotation />
       case 'adjudication':
-        return <Adjudication />
+        return <Adjudication setActiveSection={setActiveSection} />
       case 'dos-donts':
         return <DosAndDonts />
       case 'best-practices':

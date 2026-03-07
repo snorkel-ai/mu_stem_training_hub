@@ -110,7 +110,7 @@ function OriginalSubmissionStep6() {
             <strong>*A failed difficulty evaluation does not count towards your three-revision limit.</strong>
           </p>
         </div>
-        <div className="step-subsection">
+        <div className="step-subsection" id="evaluations-deep-dive">
           <h4 className="step-subtitle">Evaluations Deep Dive</h4>
           <p>Below are all evaluations your submission will go through.</p>
           <ul>

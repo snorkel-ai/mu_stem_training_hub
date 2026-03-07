@@ -17,7 +17,7 @@ function App() {
       <Header />
       <div className="app-body">
         <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-        <ContentArea activeSection={activeSection} />
+        <ContentArea activeSection={activeSection} setActiveSection={setActiveSection} />
       </div>
     </div>
   )
